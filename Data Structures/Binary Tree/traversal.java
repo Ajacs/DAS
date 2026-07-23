@@ -9,3 +9,7 @@ class TreeNode<T> {
         this.right = null;
     }
 }
+
+class Solution {
+    
+}
