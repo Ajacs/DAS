@@ -41,12 +41,24 @@ Constraints:
 
 */
 
-class Solution {
+package com.das.algorithms.arrays;
+
+import java.util.Arrays;
+
+public class RunningSumOf1DArray {
     public int[] runningSum(int[] nums) {
         for(var i = 1; i < nums.length; i++) {
             nums[i] = nums[i] + nums[i - 1];
         }
 
         return nums;
+    }
+
+    public static void main(String[] args) {
+        var exercise = new RunningSumOf1DArray();
+        var nums = new int[] {1, 2, 3, 4};
+
+        System.out.println("Input:  " + Arrays.toString(nums));
+        System.out.println("Output: " + Arrays.toString(exercise.runningSum(nums)));
     }
 }

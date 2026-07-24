@@ -7,9 +7,11 @@ Write a method, undirectedPath, that takes in a list of edges for an undirected 
 
 */
 
+package com.das.algorithms.graphs;
+
 import java.util.*;
 
-class Source {
+public class UndirectedPath {
   public static boolean undirectedPath(List<List<String>> edges, String nodeA, String nodeB) {
     var visited = new HashSet<String>();
     var graph = buildGraph(edges);
@@ -18,7 +20,7 @@ class Source {
   }
 
   public static boolean dfs(Map<String, List<String>> graph, String src, String dst, Set<String> visited) {
-    if (src == dst) {
+    if (src.equals(dst)) {
       return true;
     }
 
@@ -50,8 +52,15 @@ class Source {
     return graph;
   }
 
-  public static void run() {
-    // this function behaves as `main()` for the 'run' command
-    // you may sandbox in this function , but should not remove it
+  public static void main(String[] args) {
+    var edges = List.of(
+        List.of("i", "j"),
+        List.of("k", "i"),
+        List.of("m", "k"),
+        List.of("k", "l"),
+        List.of("o", "n"));
+
+    System.out.println("Edges:  " + edges);
+    System.out.println("Path i -> m: " + undirectedPath(edges, "i", "m"));
   }
 }

@@ -23,9 +23,11 @@ Output: [[15,13,2,5],[14,3,4,1],[12,6,8,9],[16,7,10,11]]
 
 
 */
+package com.das.algorithms.matrices;
+
 import java.util.Arrays;
 
-class Solution {
+public class RotateImage {
     public void rotate(int[][] matrix) {
         var n = matrix.length;
 
@@ -51,5 +53,18 @@ class Solution {
                 right--;
             }
         }
+    }
+
+    public static void main(String[] args) {
+        var exercise = new RotateImage();
+        var matrix = new int[][] {
+            {1, 2, 3},
+            {4, 5, 6},
+            {7, 8, 9}
+        };
+
+        System.out.println("Input:  " + Arrays.deepToString(matrix));
+        exercise.rotate(matrix);
+        System.out.println("Output: " + Arrays.deepToString(matrix));
     }
 }

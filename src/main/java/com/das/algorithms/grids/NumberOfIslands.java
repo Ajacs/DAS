@@ -44,9 +44,9 @@ Constraints:
 
 */
 
-package LeetCode Problems;
+package com.das.algorithms.grids;
 
-class Solution {
+public class NumberOfIslands {
     public int numIslands(char[][] grid) {
         var islandsCount = 0;
 
@@ -72,5 +72,17 @@ class Solution {
         dfs(grid, r - 1, c); // up
         dfs(grid, r, c + 1); // right
         dfs(grid, r, c - 1); // left
+    }
+
+    public static void main(String[] args) {
+        var exercise = new NumberOfIslands();
+        var grid = new char[][] {
+            {'1', '1', '0', '0', '0'},
+            {'1', '1', '0', '0', '0'},
+            {'0', '0', '1', '0', '0'},
+            {'0', '0', '0', '1', '1'}
+        };
+
+        System.out.println("Number of islands: " + exercise.numIslands(grid));
     }
 }

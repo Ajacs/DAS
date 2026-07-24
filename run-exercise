@@ -1,0 +1,99 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+PROJECT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+SOURCE_DIR="$PROJECT_DIR/src/main/java"
+BUILD_DIR="$PROJECT_DIR/.build/classes"
+
+EXERCISE_NAMES="
+closest-carrot
+group-anagrams
+merge-sorted
+minimum-island
+number-of-islands
+prerequisites
+rotate-image
+running-sum
+undirected-path
+"
+
+print_usage() {
+  echo "Uso:"
+  echo "  ./run-exercise list"
+  echo "  ./run-exercise <nombre>"
+  echo "  ./run-exercise all"
+  echo
+  echo "Ejercicios:"
+  printf '%s\n' "$EXERCISE_NAMES" | sed '/^$/d' | sed 's/^/  /'
+}
+
+class_for() {
+  case "$1" in
+    running-sum) echo "com.das.algorithms.arrays.RunningSumOf1DArray" ;;
+    merge-sorted) echo "com.das.algorithms.arrays.MergeSortedArrays" ;;
+    group-anagrams) echo "com.das.algorithms.hashingstrings.GroupAnagrams" ;;
+    rotate-image) echo "com.das.algorithms.matrices.RotateImage" ;;
+    undirected-path) echo "com.das.algorithms.graphs.UndirectedPath" ;;
+    prerequisites) echo "com.das.algorithms.graphs.PrereqqsPossible" ;;
+    number-of-islands) echo "com.das.algorithms.grids.NumberOfIslands" ;;
+    minimum-island) echo "com.das.algorithms.grids.MinimalIslands" ;;
+    closest-carrot) echo "com.das.algorithms.grids.ClosestCarrot" ;;
+    *) return 1 ;;
+  esac
+}
+
+compile_exercises() {
+  mkdir -p "$BUILD_DIR"
+
+  local sources=()
+  while IFS= read -r -d '' file; do
+    sources+=("$file")
+  done < <(find "$SOURCE_DIR" -type f -name '*.java' -print0)
+
+  if [[ ${#sources[@]} -eq 0 ]]; then
+    echo "No se encontraron archivos Java." >&2
+    exit 1
+  fi
+
+  javac -encoding UTF-8 -d "$BUILD_DIR" "${sources[@]}"
+}
+
+run_one() {
+  local name="$1"
+  local class_name
+
+  if ! class_name="$(class_for "$name")"; then
+    echo "Ejercicio desconocido: $name" >&2
+    echo >&2
+    print_usage >&2
+    exit 1
+  fi
+
+  echo
+  echo "=== $name ==="
+  java -cp "$BUILD_DIR" "$class_name"
+}
+
+if [[ $# -ne 1 ]]; then
+  print_usage
+  exit 1
+fi
+
+command="$1"
+
+if [[ "$command" == "list" ]]; then
+  print_usage
+  exit 0
+fi
+
+compile_exercises
+
+if [[ "$command" == "all" ]]; then
+  while IFS= read -r name; do
+    [[ -z "$name" ]] && continue
+    run_one "$name"
+  done < <(printf '%s\n' "$EXERCISE_NAMES")
+else
+  run_one "$command"
+fi

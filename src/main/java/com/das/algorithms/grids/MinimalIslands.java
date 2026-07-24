@@ -1,6 +1,8 @@
+package com.das.algorithms.grids;
+
 import java.util.*;
 
-class Source {
+public class MinimalIslands {
 
     private static int[] D_ROW = {1, -1, 0, 0};
     private static int[] D_COL = {0, 0, 1, -1};
@@ -51,8 +53,15 @@ class Source {
     return counter;
   }
 
-  public static void run() {
-    // this function behaves as `main()` for the 'run' command
-    // you may sandbox in this function , but should not remove it
+  public static void main(String[] args) {
+    var grid = List.of(
+        List.of("W", "L", "W", "W", "W"),
+        List.of("W", "L", "W", "W", "W"),
+        List.of("W", "W", "W", "L", "W"),
+        List.of("W", "W", "L", "L", "W"),
+        List.of("L", "W", "W", "L", "L"),
+        List.of("L", "L", "W", "W", "W"));
+
+    System.out.println("Minimum island size: " + minimumIsland(grid));
   }
 }

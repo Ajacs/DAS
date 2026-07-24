@@ -45,9 +45,11 @@ Constraints:
 
 
 */
-import java.util.HashMap;
+package com.das.algorithms.hashingstrings;
 
-class Solution {
+import java.util.*;
+
+public class GroupAnagrams {
     public List<List<String>> groupAnagrams(String[] strs) {
         var map = new HashMap<String, List<String>>();
 
@@ -76,5 +78,13 @@ class Solution {
         String sorted = new String(chars);
 
         return sorted;
+    }
+
+    public static void main(String[] args) {
+        var exercise = new GroupAnagrams();
+        var words = new String[] {"eat", "tea", "tan", "ate", "nat", "bat"};
+
+        System.out.println("Input:  " + Arrays.toString(words));
+        System.out.println("Output: " + exercise.groupAnagrams(words));
     }
 }

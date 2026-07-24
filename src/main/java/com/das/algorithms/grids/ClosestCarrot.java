@@ -11,9 +11,11 @@ If there is no possible path to a carrot, then return -1.
 
 
 */
+package com.das.algorithms.grids;
+
 import java.util.*;
 
-class Source {
+public class ClosestCarrot {
   private static final int[] D_ROW = {1, -1, 0, 0};
   private static final int[] D_COL = {0, 0, 1, -1};
 
@@ -53,8 +55,14 @@ class Source {
     return -1;
   }
 
-  public static void run() {
-    // this function behaves as `main()` for the 'run' command
-    // you may sandbox in this function , but should not remove it
+  public static void main(String[] args) {
+    var grid = List.of(
+        List.of("O", "O", "O", "O", "O"),
+        List.of("O", "X", "O", "O", "O"),
+        List.of("O", "X", "X", "O", "O"),
+        List.of("O", "X", "C", "O", "O"),
+        List.of("O", "O", "O", "O", "O"));
+
+    System.out.println("Closest carrot distance: " + closestCarrot(grid, 0, 0));
   }
 }
