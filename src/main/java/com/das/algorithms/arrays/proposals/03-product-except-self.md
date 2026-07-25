@@ -4,9 +4,9 @@
 **Patrón:** Productos prefijos y sufijos  
 **Referencia:** [LeetCode 238](https://leetcode.com/problems/product-of-array-except-self/)
 
-## Descripción
+## Description
 
-Dado un arreglo, construye otro donde `answer[i]` sea el producto de todos los elementos excepto `nums[i]`. No puedes utilizar división.
+Given an integer array, build an output array where `answer[i]` is the product of every element except `nums[i]`. You may not use division.
 
 ## Input
 
@@ -26,11 +26,10 @@ nums = [1, 2, 3, 4]
 [24, 12, 8, 6]
 ```
 
-## Restricciones
+## Constraints
 
 - `2 <= nums.length <= 100,000`
 - `-30 <= nums[i] <= 30`
-- Los productos de cualquier prefijo o sufijo caben en un entero de 32 bits.
-- No se permite división.
-- Objetivo: `O(n)` tiempo y `O(1)` espacio adicional, sin contar el arreglo de salida.
-
+- The product of every prefix or suffix fits in a 32-bit integer.
+- Division is not allowed.
+- Target: `O(n)` time and `O(1)` extra space, excluding the output array.

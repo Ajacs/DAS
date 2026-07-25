@@ -74,6 +74,8 @@ Cada categoría contiene:
 
 Las notas y planes están en `Notas de Estudio/`.
 
+> Las carpetas representan la **estructura de datos o dominio principal**, no siempre la técnica completa. Por ejemplo, Move Zeroes vive en `arrays` aunque use dos punteros; Two Sum con entrada desordenada vive en `hashingstrings` porque su solución objetivo utiliza un `HashMap`.
+
 ## Packages
 
 | Categoría | Package |

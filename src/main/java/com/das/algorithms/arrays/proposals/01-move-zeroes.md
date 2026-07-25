@@ -4,9 +4,9 @@
 **Patrón:** Dos punteros, escritura in-place  
 **Referencia:** [LeetCode 283](https://leetcode.com/problems/move-zeroes/)
 
-## Descripción
+## Description
 
-Dado un arreglo de enteros, mueve todos los ceros al final mientras conservas el orden relativo de los elementos distintos de cero. Debes modificar el arreglo recibido y no crear una copia completa.
+Given an integer array, move all zeroes to the end while preserving the relative order of the non-zero elements. You must modify the input array without creating a full copy.
 
 ## Input
 
@@ -22,16 +22,15 @@ nums = [0, 1, 0, 3, 12]
 
 ## Output
 
-El método no retorna un arreglo nuevo. Al terminar:
+The method does not return a new array. After execution:
 
 ```text
 nums = [1, 3, 12, 0, 0]
 ```
 
-## Restricciones
+## Constraints
 
 - `1 <= nums.length <= 10,000`
 - `-2^31 <= nums[i] <= 2^31 - 1`
-- Debes modificar `nums` in-place.
-- Intenta minimizar la cantidad de escrituras.
-
+- You must modify `nums` in-place.
+- Try to minimize the total number of writes.

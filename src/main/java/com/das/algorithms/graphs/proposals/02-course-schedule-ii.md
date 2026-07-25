@@ -4,11 +4,11 @@
 **Patrón:** Ordenamiento topológico  
 **Referencia:** [LeetCode 210](https://leetcode.com/problems/course-schedule-ii/)
 
-## Descripción
+## Description
 
-Recibes cursos numerados y pares de prerequisitos. Devuelve un orden en el que sea posible completar todos los cursos. Si existe un ciclo y no hay ningún orden válido, devuelve un arreglo vacío.
+You are given numbered courses and prerequisite pairs. Return an order in which all courses can be completed. If a cycle makes every ordering impossible, return an empty array.
 
-Un par `[curso, requisito]` indica que `requisito` debe completarse antes que `curso`.
+A pair `[course, prerequisite]` means that `prerequisite` must be completed before `course`.
 
 ## Input
 
@@ -26,19 +26,18 @@ prerequisites = [[1, 0], [2, 0], [3, 1], [3, 2]]
 
 ## Output
 
-Una respuesta válida:
+One valid answer is:
 
 ```text
 [0, 2, 1, 3]
 ```
 
-Puede haber más de un orden correcto.
+More than one valid ordering may exist.
 
-## Restricciones
+## Constraints
 
 - `1 <= numCourses <= 2,000`
 - `0 <= prerequisites.length <= numCourses * (numCourses - 1)`
-- Cada par contiene dos ids entre `0` y `numCourses - 1`.
-- Los pares de prerequisitos no están repetidos.
-- Si no se pueden completar todos los cursos, devuelve una colección vacía.
-
+- Each pair contains two identifiers between `0` and `numCourses - 1`.
+- Prerequisite pairs are unique.
+- Return an empty collection if all courses cannot be completed.

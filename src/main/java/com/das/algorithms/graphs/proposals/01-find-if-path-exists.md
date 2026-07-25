@@ -4,9 +4,9 @@
 **Patrón:** Lista de adyacencia + DFS/BFS  
 **Referencia:** [LeetCode 1971](https://leetcode.com/problems/find-if-path-exists-in-graph/)
 
-## Descripción
+## Description
 
-Un grafo no dirigido tiene nodos numerados de `0` a `n-1`. Dadas sus aristas, un origen y un destino, determina si existe algún camino entre ambos.
+An undirected graph contains nodes numbered from `0` to `n-1`. Given its edges, a source, and a destination, determine whether any path exists between the two nodes.
 
 ## Input
 
@@ -32,12 +32,11 @@ destination = 2
 true
 ```
 
-## Restricciones
+## Constraints
 
 - `1 <= n <= 200,000`
 - `0 <= edges.length <= 200,000`
-- Cada arista tiene exactamente dos nodos válidos.
-- No hay aristas de un nodo hacia sí mismo.
-- No hay aristas duplicadas.
-- El grafo es no dirigido.
-
+- Every edge contains exactly two valid node identifiers.
+- There are no self-edges.
+- There are no duplicate edges.
+- The graph is undirected.

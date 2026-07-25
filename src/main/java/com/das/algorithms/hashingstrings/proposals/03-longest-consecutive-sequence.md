@@ -4,9 +4,9 @@
 **Patrón:** Hash set e inicio de secuencia  
 **Referencia:** [LeetCode 128](https://leetcode.com/problems/longest-consecutive-sequence/)
 
-## Descripción
+## Description
 
-Dado un arreglo desordenado, devuelve la longitud de la secuencia más larga de valores enteros consecutivos. Los elementos de la secuencia no necesitan estar juntos en el arreglo.
+Given an unsorted integer array, return the length of the longest sequence of consecutive values. The values do not need to be adjacent in the input array.
 
 ## Input
 
@@ -26,12 +26,11 @@ nums = [100, 4, 200, 1, 3, 2]
 4
 ```
 
-La secuencia es `[1, 2, 3, 4]`.
+The sequence is `[1, 2, 3, 4]`.
 
-## Restricciones
+## Constraints
 
 - `0 <= nums.length <= 100,000`
 - `-10^9 <= nums[i] <= 10^9`
-- Puede haber valores repetidos.
-- Debes diseñar una solución con tiempo esperado `O(n)`.
-
+- Duplicate values may appear.
+- Design a solution with expected `O(n)` time.

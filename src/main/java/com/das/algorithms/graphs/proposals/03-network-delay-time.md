@@ -4,9 +4,9 @@
 **Patrón:** Dijkstra y priority queue  
 **Referencia:** [LeetCode 743](https://leetcode.com/problems/network-delay-time/)
 
-## Descripción
+## Description
 
-Una red dirigida contiene tiempos de viaje entre nodos. Una señal parte del nodo `k`. Calcula cuánto tarda en alcanzar todos los nodos; si alguno es inalcanzable, devuelve `-1`.
+A directed network contains travel times between nodes. A signal starts from node `k`. Return the time required for the signal to reach every node, or `-1` if any node is unreachable.
 
 ## Input
 
@@ -16,7 +16,7 @@ n: int
 k: int
 ```
 
-Cada elemento de `times` tiene forma `[origen, destino, tiempo]`.
+Each element of `times` has the form `[source, destination, travelTime]`.
 
 Ejemplo:
 
@@ -32,7 +32,7 @@ k = 2
 2
 ```
 
-## Restricciones
+## Constraints
 
 - `1 <= k <= n <= 100`
 - `1 <= times.length <= 6,000`
@@ -40,5 +40,4 @@ k = 2
 - `1 <= u, v <= n`
 - `u != v`
 - `0 <= w <= 100`
-- No hay múltiples aristas con el mismo origen y destino.
-
+- There are no multiple edges with the same source and destination.

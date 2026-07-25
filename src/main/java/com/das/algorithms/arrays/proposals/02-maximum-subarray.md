@@ -4,9 +4,9 @@
 **Patrón:** Kadane, acumulación  
 **Referencia:** [LeetCode 53](https://leetcode.com/problems/maximum-subarray/)
 
-## Descripción
+## Description
 
-Dado un arreglo de enteros, encuentra la mayor suma posible de un subarreglo contiguo no vacío.
+Given an integer array, find the largest possible sum of a non-empty contiguous subarray.
 
 ## Input
 
@@ -26,12 +26,11 @@ nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
 6
 ```
 
-La suma corresponde al subarreglo `[4, -1, 2, 1]`.
+The sum comes from the subarray `[4, -1, 2, 1]`.
 
-## Restricciones
+## Constraints
 
 - `1 <= nums.length <= 100,000`
 - `-10,000 <= nums[i] <= 10,000`
-- El subarreglo debe contener al menos un elemento.
-- Objetivo recomendado: `O(n)` tiempo.
-
+- The subarray must contain at least one element.
+- Recommended target: `O(n)` time.

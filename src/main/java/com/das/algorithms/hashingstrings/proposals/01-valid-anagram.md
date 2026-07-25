@@ -4,9 +4,9 @@
 **Patrón:** Conteo de frecuencias  
 **Referencia:** [LeetCode 242](https://leetcode.com/problems/valid-anagram/)
 
-## Descripción
+## Description
 
-Recibes dos strings. Determina si el segundo puede formarse reordenando exactamente todos los caracteres del primero.
+Given two strings, determine whether the second can be formed by rearranging every character from the first string exactly once.
 
 ## Input
 
@@ -28,9 +28,8 @@ t = "nagaram"
 true
 ```
 
-## Restricciones
+## Constraints
 
 - `1 <= s.length, t.length <= 50,000`
-- `s` y `t` contienen letras inglesas minúsculas.
-- Cada aparición cuenta: no basta comparar conjuntos de letras.
-
+- `s` and `t` contain lowercase English letters.
+- Character frequencies matter; comparing only the set of characters is insufficient.

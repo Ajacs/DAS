@@ -1,12 +1,19 @@
-# Two Sum
+# Two Sum — Unsorted Input
 
 **Dificultad:** Fácil  
-**Patrón:** Hash map y complemento  
+**Categoría principal:** Hashing  
+**Patrón:** `HashMap` de valor → índice y búsqueda de complemento  
 **Referencia:** [LeetCode 1](https://leetcode.com/problems/two-sum/)
 
-## Descripción
+## Por qué está en Hashing
 
-Dado un arreglo y un objetivo, encuentra los índices de dos elementos distintos cuya suma sea igual al objetivo.
+El arreglo no está ordenado. Para cada valor `nums[i]`, calculamos `target - nums[i]` y consultamos en un `HashMap` si ese complemento apareció antes. Esto permite una solución `O(n)` sin ordenar la entrada.
+
+No debe confundirse con **Two Sum II**: en esa variante el arreglo ya está ordenado y se utilizan dos punteros desde los extremos.
+
+## Description
+
+Given an integer array and a target value, return the indices of two distinct elements whose sum equals the target.
 
 ## Input
 
@@ -28,13 +35,12 @@ target = 9
 [0, 1]
 ```
 
-El orden de los dos índices puede variar.
+The two indices may be returned in any order.
 
-## Restricciones
+## Constraints
 
 - `2 <= nums.length <= 10,000`
 - `-10^9 <= nums[i] <= 10^9`
 - `-10^9 <= target <= 10^9`
-- Existe exactamente una respuesta válida.
-- No puedes utilizar el mismo elemento dos veces.
-
+- Exactly one valid answer exists.
+- You may not use the same element twice.

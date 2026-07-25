@@ -4,9 +4,9 @@
 **Patrón:** Marcadores in-place  
 **Referencia:** [LeetCode 73](https://leetcode.com/problems/set-matrix-zeroes/)
 
-## Descripción
+## Description
 
-Si una celda de una matriz contiene `0`, convierte en cero toda su fila y toda su columna. Las decisiones deben basarse en la matriz original, no en ceros creados durante el proceso.
+If a matrix cell contains `0`, set its entire row and column to zero. The changes must be based on the original zeroes, not on zeroes introduced during the transformation.
 
 ## Input
 
@@ -26,7 +26,7 @@ matrix = [
 
 ## Output
 
-La matriz queda:
+The resulting matrix is:
 
 ```text
 [
@@ -36,11 +36,10 @@ La matriz queda:
 ]
 ```
 
-## Restricciones
+## Constraints
 
 - `1 <= matrix.length <= 200`
 - `1 <= matrix[i].length <= 200`
 - `-2^31 <= matrix[i][j] <= 2^31 - 1`
-- Debes modificar la matriz recibida.
-- Reto recomendado: utilizar `O(1)` espacio adicional.
-
+- You must modify the input matrix.
+- Recommended follow-up: use `O(1)` additional space.

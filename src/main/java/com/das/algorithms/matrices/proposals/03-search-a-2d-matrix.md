@@ -4,9 +4,9 @@
 **Patrón:** Búsqueda binaria sobre matriz ordenada  
 **Referencia:** [LeetCode 74](https://leetcode.com/problems/search-a-2d-matrix/)
 
-## Descripción
+## Description
 
-Dada una matriz donde cada fila está ordenada y el primer valor de una fila es mayor que el último de la fila anterior, determina si contiene un objetivo.
+Given a matrix where each row is sorted and the first value of each row is greater than the final value of the previous row, determine whether it contains a target value.
 
 ## Input
 
@@ -32,12 +32,11 @@ target = 3
 true
 ```
 
-## Restricciones
+## Constraints
 
 - `1 <= matrix.length <= 100`
 - `1 <= matrix[i].length <= 100`
 - `-10,000 <= matrix[i][j], target <= 10,000`
-- Cada fila está ordenada de forma creciente.
-- El primer valor de cada fila es mayor que el último de la fila anterior.
-- Objetivo recomendado: `O(log(m * n))`.
-
+- Each row is sorted in increasing order.
+- The first value of each row is greater than the final value of the previous row.
+- Recommended target: `O(log(m * n))`.

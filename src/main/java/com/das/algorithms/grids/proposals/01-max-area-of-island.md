@@ -4,9 +4,9 @@
 **Patrón:** DFS/BFS que mide componentes  
 **Referencia:** [LeetCode 695](https://leetcode.com/problems/max-area-of-island/)
 
-## Descripción
+## Description
 
-Dada una grilla binaria, encuentra la mayor cantidad de celdas de tierra conectadas horizontal o verticalmente. Si no hay tierra, devuelve `0`.
+Given a binary grid, return the largest number of land cells connected horizontally or vertically. Return `0` if the grid contains no land.
 
 ## Input
 
@@ -30,10 +30,9 @@ grid = [
 5
 ```
 
-## Restricciones
+## Constraints
 
 - `1 <= grid.length <= 50`
 - `1 <= grid[i].length <= 50`
-- `grid[i][j]` es `0` o `1`.
-- Solo cuentan conexiones arriba, abajo, izquierda y derecha.
-
+- `grid[i][j]` is either `0` or `1`.
+- Only up, down, left, and right connections count.

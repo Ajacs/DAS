@@ -4,9 +4,9 @@
 **Patrón:** BFS y camino más corto  
 **Referencia:** [LeetCode 1091](https://leetcode.com/problems/shortest-path-in-binary-matrix/)
 
-## Descripción
+## Description
 
-Dada una matriz cuadrada binaria, encuentra la longitud del camino libre más corto desde la esquina superior izquierda hasta la inferior derecha. Puedes moverte en ocho direcciones. Las celdas con `1` están bloqueadas.
+Given a square binary matrix, return the length of the shortest clear path from the top-left corner to the bottom-right corner. You may move in eight directions. Cells containing `1` are blocked.
 
 ## Input
 
@@ -29,14 +29,13 @@ grid = [
 2
 ```
 
-Si no existe un camino, devuelve `-1`.
+Return `-1` if no path exists.
 
-## Restricciones
+## Constraints
 
 - `1 <= grid.length <= 100`
-- `grid` es una matriz cuadrada.
-- `grid[i][j]` es `0` o `1`.
-- Solo se puede avanzar por celdas con `0`.
-- Se permiten movimientos horizontales, verticales y diagonales.
-- La longitud cuenta la cantidad de celdas visitadas, incluyendo inicio y destino.
-
+- `grid` is a square matrix.
+- `grid[i][j]` is either `0` or `1`.
+- You may only move through cells containing `0`.
+- Horizontal, vertical, and diagonal moves are allowed.
+- Path length counts visited cells, including the start and destination.
