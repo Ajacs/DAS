@@ -43,6 +43,11 @@ El primer DFS elimina las tres celdas conectadas. Más tarde aparece otra tierra
 
 La primera celda encontrada de cada componente aumenta el contador una vez. El DFS marca todo ese componente, de modo que ninguna de sus otras celdas puede volver a aumentarlo.
 
+## Complejidad
+
+- **Tiempo:** `O(R·C)`, cada celda se procesa como máximo una vez.
+- **Espacio:** `O(R·C)` en el peor caso por la pila recursiva.
+
 ## Casos límite
 
 - Todo agua: `0`.

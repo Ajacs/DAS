@@ -38,6 +38,11 @@ Si las islas tienen tamaños `4`, `2` y `5`, los DFS devuelven esos valores. Las
 
 Cada celda de tierra nueva aporta exactamente `1`, y la recursión suma cada celda conectada una sola vez gracias a `visited`. Por tanto, la primera llamada sobre una isla devuelve su tamaño exacto.
 
+## Complejidad
+
+- **Tiempo:** `O(R·C)`.
+- **Espacio:** `O(R·C)` para visitados y pila recursiva.
+
 ## Casos límite
 
 - Sin tierra: la implementación devuelve `0`.

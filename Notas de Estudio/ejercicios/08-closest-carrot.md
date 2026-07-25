@@ -38,6 +38,11 @@ Si hay zanahorias a 2 y 5 pasos, BFS visita todas las celdas a distancia 1 antes
 
 La cola FIFO conserva capas de distancia. Una celda se marca al encolarla, así que entra una sola vez y su primera ruta es mínima.
 
+## Complejidad
+
+- **Tiempo:** `O(R·C)`.
+- **Espacio:** `O(R·C)` para cola y visitados.
+
 ## Casos límite
 
 - El inicio ya es una zanahoria: devuelve `0`.

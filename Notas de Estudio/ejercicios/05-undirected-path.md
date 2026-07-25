@@ -37,6 +37,11 @@ Aristas: `(a,b), (b,c), (x,y)`. De `a` a `c`: `a → b → c`, sí. De `a` a `x`
 
 DFS visita exactamente los nodos alcanzables desde el origen. Si encuentra el destino existe un camino; si agota ese componente, no existe.
 
+## Complejidad
+
+- **Tiempo:** `O(V+E)`.
+- **Espacio:** `O(V+E)` incluyendo la lista de adyacencia y la recursión.
+
 ## Casos límite
 
 - Origen igual a destino.

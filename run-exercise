@@ -8,13 +8,24 @@ BUILD_DIR="$PROJECT_DIR/.build/classes"
 
 EXERCISE_NAMES="
 closest-carrot
+count-subarray-product
+count-substring-anagrams
+count-substring-at-most-k
+count-substring-exactly-k
+find-subarray-sum
 group-anagrams
+has-substring-anagram
+longest-subarray-sum
+longest-two-char-substring
+longest-unique-substring
+max-ones-single-flip
 merge-sorted
 minimum-island
 number-of-islands
 prerequisites
 rotate-image
 running-sum
+trapping-rain-water
 undirected-path
 "
 
@@ -32,6 +43,7 @@ class_for() {
   case "$1" in
     running-sum) echo "com.das.algorithms.arrays.RunningSumOf1DArray" ;;
     merge-sorted) echo "com.das.algorithms.arrays.MergeSortedArrays" ;;
+    trapping-rain-water) echo "com.das.algorithms.arrays.TrappingRainWater" ;;
     group-anagrams) echo "com.das.algorithms.hashingstrings.GroupAnagrams" ;;
     rotate-image) echo "com.das.algorithms.matrices.RotateImage" ;;
     undirected-path) echo "com.das.algorithms.graphs.UndirectedPath" ;;
@@ -39,6 +51,16 @@ class_for() {
     number-of-islands) echo "com.das.algorithms.grids.NumberOfIslands" ;;
     minimum-island) echo "com.das.algorithms.grids.MinimalIslands" ;;
     closest-carrot) echo "com.das.algorithms.grids.ClosestCarrot" ;;
+    find-subarray-sum) echo "com.das.algorithms.slidingwindow.FindSubarraySum" ;;
+    longest-subarray-sum) echo "com.das.algorithms.slidingwindow.LongestSubarraySum" ;;
+    longest-unique-substring) echo "com.das.algorithms.slidingwindow.LongestUniqueSubstring" ;;
+    has-substring-anagram) echo "com.das.algorithms.slidingwindow.HasSubstringAnagram" ;;
+    count-substring-anagrams) echo "com.das.algorithms.slidingwindow.CountSubstringAnagrams" ;;
+    count-subarray-product) echo "com.das.algorithms.slidingwindow.CountSubarrayProduct" ;;
+    count-substring-at-most-k) echo "com.das.algorithms.slidingwindow.CountSubstringAtMostKDistinct" ;;
+    count-substring-exactly-k) echo "com.das.algorithms.slidingwindow.CountSubstringExactlyKDistinct" ;;
+    longest-two-char-substring) echo "com.das.algorithms.slidingwindow.LongestTwoCharSubstring" ;;
+    max-ones-single-flip) echo "com.das.algorithms.slidingwindow.MaxOnesWithSingleFlip" ;;
     *) return 1 ;;
   esac
 }

@@ -34,6 +34,17 @@ Desde la raíz del proyecto:
 ./run-exercise number-of-islands
 ./run-exercise minimum-island
 ./run-exercise closest-carrot
+./run-exercise trapping-rain-water
+./run-exercise find-subarray-sum
+./run-exercise longest-subarray-sum
+./run-exercise longest-unique-substring
+./run-exercise has-substring-anagram
+./run-exercise count-substring-anagrams
+./run-exercise count-subarray-product
+./run-exercise count-substring-at-most-k
+./run-exercise count-substring-exactly-k
+./run-exercise longest-two-char-substring
+./run-exercise max-ones-single-flip
 ```
 
 El runner compila los ejercicios dentro de `.build/classes` y ejecuta únicamente el seleccionado.
@@ -64,7 +75,8 @@ src/main/java/com/das/algorithms/
 ├── hashingstrings/
 ├── matrices/
 ├── graphs/
-└── grids/
+├── grids/
+└── slidingwindow/
 ```
 
 Cada categoría contiene:
@@ -85,5 +97,6 @@ Las notas y planes están en `Notas de Estudio/`.
 | Matrices | `com.das.algorithms.matrices` |
 | Graphs | `com.das.algorithms.graphs` |
 | Grids | `com.das.algorithms.grids` |
+| Sliding Window | `com.das.algorithms.slidingwindow` |
 
 Las carpetas y las declaraciones `package` coinciden exactamente.

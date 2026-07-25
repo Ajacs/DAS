@@ -43,6 +43,11 @@ Dos entradas ordenadas sugieren dos punteros. El espacio vacío al final de `num
 
 El mayor valor pendiente solo puede estar en `nums1[i]` o `nums2[j]`. Colocarlo en `p` fija correctamente la última posición pendiente sin sobrescribir datos útiles.
 
+## Complejidad
+
+- **Tiempo:** `O(m+n)`, cada elemento se procesa una vez.
+- **Espacio:** `O(1)` adicional.
+
 ## Casos límite
 
 - `n = 0`: no hay nada que copiar.

@@ -24,6 +24,17 @@ Estas notas convierten los ejercicios del repositorio en patrones reutilizables.
 | 8 | [Closest Carrot](ejercicios/08-closest-carrot.md) | Media | BFS | Camino más corto sin pesos |
 | 9 | [Prerequisites Possible](ejercicios/09-prerequisites-possible.md) | Media | DFS + detección de ciclo | Dependencias dirigidas |
 | 10 | [Binary Tree Traversal](ejercicios/10-binary-tree-traversal.md) | Base | DFS/BFS en árbol | Recorrer todos los nodos |
+| 11 | [Trapping Rain Water](ejercicios/11-trapping-rain-water.md) | Difícil | Dos punteros | Límites izquierdo y derecho |
+| 12 | [Find Subarray Sum](ejercicios/12-find-subarray-sum.md) | Media | Sliding window variable | Suma objetivo con positivos |
+| 13 | [Longest Subarray Sum](ejercicios/13-longest-subarray-sum.md) | Media | Sliding window variable | Longitud máxima con suma objetivo |
+| 14 | [Longest Unique Substring](ejercicios/14-longest-unique-substring.md) | Media | Sliding window + set | Substring sin repetidos |
+| 15 | [Has Substring Anagram](ejercicios/15-has-substring-anagram.md) | Media | Ventana fija + frecuencias | Existencia de una permutación |
+| 16 | [Count Substring Anagrams](ejercicios/16-count-substring-anagrams.md) | Media | Ventana fija + frecuencias | Contar todas las permutaciones |
+| 17 | [Count Subarray Product](ejercicios/17-count-subarray-product.md) | Media | Ventana variable + producto | Contar ventanas válidas |
+| 18 | [At Most K Distinct](ejercicios/18-at-most-k-distinct.md) | Media | Ventana variable + frecuencias | Contar substrings válidos |
+| 19 | [Exactly K Distinct](ejercicios/19-exactly-k-distinct.md) | Media | Diferencia de conteos | Convertir “exactamente” en “a lo sumo” |
+| 20 | [Longest Two Char Substring](ejercicios/20-longest-two-char-substring.md) | Media | Ventana variable + mapa | Exactamente dos caracteres |
+| 21 | [Max Ones With Single Flip](ejercicios/21-max-ones-single-flip.md) | Media | Ventana con presupuesto | Permitir como máximo un cero |
 
 ## Categorías y orden recomendado
 
@@ -50,6 +61,12 @@ Una grilla también puede verse como un grafo: cada celda válida es un nodo y s
 `Binary Tree Traversal`
 
 El archivo original solo define el nodo. La nota lo marca como tema pendiente y contiene los recorridos mínimos que deberías dominar.
+
+### 5. Sliding window y dos punteros avanzados
+
+`Find Subarray Sum` → `Longest Subarray Sum` → `Longest Unique Substring` → `Longest Two Char Substring` → `At Most K Distinct` → `Exactly K Distinct` → `Count Subarray Product` → `Max Ones With Single Flip` → `Has Substring Anagram` → `Count Substring Anagrams` → `Trapping Rain Water`
+
+Aprendes ventanas variables, conteo de ventanas, presupuestos, ventanas fijas con frecuencias y el uso de invariantes desde ambos extremos.
 
 ## Regla rápida: DFS o BFS
 

@@ -40,6 +40,11 @@ Requisitos, tareas, paquetes o compilaciones forman grafos dirigidos. “¿Es po
 
 Un ciclo dirigido existe exactamente cuando DFS encuentra una arista hacia un ancestro de la ruta activa. Los nodos completamente procesados pueden reutilizarse sin repetir trabajo.
 
+## Complejidad
+
+- **Tiempo:** `O(V+E)`.
+- **Espacio:** `O(V+E)` incluyendo grafo, conjuntos y recursión.
+
 ## Casos límite
 
 - Cero prerequisitos: posible.

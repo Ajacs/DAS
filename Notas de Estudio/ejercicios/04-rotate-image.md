@@ -40,6 +40,11 @@ Las rotaciones de matrices suelen descomponerse en reflexión/transposición. Pa
 
 La transposición transforma `(r,c)` en `(c,r)`. Invertir columnas dentro de cada fila transforma después `(c,r)` en `(c,n-1-r)`, que es la coordenada de una rotación horaria.
 
+## Complejidad
+
+- **Tiempo:** `O(n²)`, proporcional a las celdas.
+- **Espacio:** `O(1)` adicional.
+
 ## Casos límite
 
 - Matriz `1×1`.

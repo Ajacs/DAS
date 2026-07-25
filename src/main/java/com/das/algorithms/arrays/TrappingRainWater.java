@@ -26,15 +26,14 @@ Output: 9
 package com.das.algorithms.arrays;
 
 public class TrappingRainWater {
-        public int trap(int[] height) {
+    public int trap(int[] height) {
         var left = 0;
         var right = height.length - 1;
-        var leftMax = Integer.MIN_VALUE;
-        var rightMax= Integer.MIN_VALUE;
+        var leftMax = 0;
+        var rightMax = 0;
         var water = 0;
 
-        while(left < right) {
-
+        while (left < right) {
             if (height[left] < height[right]) {
                 leftMax = Math.max(leftMax, height[left]);
                 water += leftMax - height[left];
@@ -50,8 +49,8 @@ public class TrappingRainWater {
     }
 
     public static void main(String[] args) {
-        int[] height = {0,1,0,2,1,0,1,3,2,1,2,1};
+        int[] height = {0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1};
         var exercise = new TrappingRainWater();
-        System.out.println(exercise.trap(height));
+        System.out.println("Trapped water: " + exercise.trap(height));
     }
 }

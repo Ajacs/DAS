@@ -40,6 +40,11 @@ Busca expresiones como “acumulado”, “desde el inicio”, “suma hasta `i`
 
 Si `nums[i - 1]` ya representa la suma de `0..i-1`, al agregarle el valor original de `nums[i]` obtenemos exactamente la suma de `0..i`.
 
+## Complejidad
+
+- **Tiempo:** `O(n)`, por un único recorrido.
+- **Espacio:** `O(1)` adicional porque reutiliza el arreglo.
+
 ## Casos límite
 
 - Un solo elemento: no entra al ciclo.

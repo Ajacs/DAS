@@ -39,6 +39,11 @@ El mapa termina con `aet: [eat, tea]` y `ant: [tan]`.
 
 Dos strings son anagramas si y solo si tienen el mismo multiconjunto de letras. Al ordenarlos, ese multiconjunto se convierte en una secuencia única.
 
+## Complejidad
+
+- **Tiempo:** `O(N · K log K)` al ordenar `N` palabras de longitud máxima `K`.
+- **Espacio:** `O(N · K)` para claves y grupos.
+
 ## Casos límite
 
 - String vacío: su clave también es `""`.
