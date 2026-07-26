@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+PROJECT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+BUILD_DIR="$PROJECT_DIR/.build/test-classes"
+
+mkdir -p "$BUILD_DIR"
+
+sources=()
+while IFS= read -r -d '' file; do
+  sources+=("$file")
+done < <(find "$PROJECT_DIR/src/main/java" "$PROJECT_DIR/src/test/java" -type f -name '*.java' -print0)
+
+javac -encoding UTF-8 -d "$BUILD_DIR" "${sources[@]}"
+java -ea -cp "$BUILD_DIR" com.das.algorithms.AllExercisesTest
+

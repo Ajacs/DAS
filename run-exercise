@@ -27,6 +27,8 @@ rotate-image
 running-sum
 trapping-rain-water
 undirected-path
+word-search
+word-search-ii
 "
 
 print_usage() {
@@ -61,6 +63,8 @@ class_for() {
     count-substring-exactly-k) echo "com.das.algorithms.slidingwindow.CountSubstringExactlyKDistinct" ;;
     longest-two-char-substring) echo "com.das.algorithms.slidingwindow.LongestTwoCharSubstring" ;;
     max-ones-single-flip) echo "com.das.algorithms.slidingwindow.MaxOnesWithSingleFlip" ;;
+    word-search) echo "com.das.algorithms.backtracking.WordSearch" ;;
+    word-search-ii) echo "com.das.algorithms.backtracking.WordSearchII" ;;
     *) return 1 ;;
   esac
 }

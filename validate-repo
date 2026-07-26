@@ -1,0 +1,49 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+PROJECT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+SOURCE_ROOT="$PROJECT_DIR/src/main/java/com/das/algorithms"
+NOTES_ROOT="$PROJECT_DIR/Notas de Estudio/ejercicios"
+
+errors=0
+exercise_count=0
+
+while IFS= read -r -d '' source; do
+  exercise_count=$((exercise_count + 1))
+
+  if ! grep -q 'public static void main' "$source"; then
+    echo "Missing main: $source"
+    errors=$((errors + 1))
+  fi
+
+  relative="${source#$PROJECT_DIR/}"
+  if ! grep -R -F -q "$relative" "$NOTES_ROOT"; then
+    echo "Missing study note: $relative"
+    errors=$((errors + 1))
+  fi
+done < <(find "$SOURCE_ROOT" -mindepth 2 -maxdepth 2 -type f -name '*.java' -print0)
+
+while IFS= read -r -d '' category; do
+  proposals="$category/proposals"
+  if [[ ! -d "$proposals" ]]; then
+    echo "Missing proposals directory: $category"
+    errors=$((errors + 1))
+    continue
+  fi
+
+  count="$(find "$proposals" -type f -name '[0-9]*.md' | wc -l | tr -d ' ')"
+  if [[ "$count" -ne 3 ]]; then
+    echo "Expected 3 proposals in $category, found $count"
+    errors=$((errors + 1))
+  fi
+done < <(find "$SOURCE_ROOT" -mindepth 1 -maxdepth 1 -type d -print0)
+
+if [[ "$errors" -ne 0 ]]; then
+  echo "Validation failed with $errors error(s)."
+  exit 1
+fi
+
+echo "Repository validation passed."
+echo "Executable exercises: $exercise_count"
+

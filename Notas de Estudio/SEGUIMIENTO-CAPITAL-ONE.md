@@ -30,7 +30,7 @@ La meta antes del examen es nivel **4 o 5** en los patrones A: arreglos, maps/se
 
 ## Checklist del plan
 
-El horario detallado y las metas de avance dentro de la plataforma están en [Plan Structy adaptado a tus horarios](PLAN-STRUCTY.md).
+El horario vigente, las simulaciones y las metas diarias están en el [Plan final de la semana](PLAN-FINAL-SEMANA.md).
 
 ### 24 de julio — Arreglos
 
